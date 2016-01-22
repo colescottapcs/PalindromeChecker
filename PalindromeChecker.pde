@@ -16,7 +16,7 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+  String letters = word.replaceAll("[^A-Za-z]+", "").toLowerCase();
+  return letters.substring(0,(letters.length()/2) + 1).equals(new StringBuilder(letters.substring(letters.length()/2,letters.length())).reverse().toString());
 }
 
